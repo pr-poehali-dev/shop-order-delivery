@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-xl font-bold text-primary">ВашМагазин</span>
+            <span className="text-xl font-bold text-primary">ПродуктыДома</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ const Header = () => {
             <div className="relative w-48">
               <Input 
                 type="text" 
-                placeholder="Поиск товаров..." 
+                placeholder="Поиск продуктов..." 
                 className="pl-8 pr-4"
               />
               <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -70,7 +70,7 @@ const Header = () => {
             <div className="relative mb-4">
               <Input 
                 type="text" 
-                placeholder="Поиск товаров..." 
+                placeholder="Поиск продуктов..." 
                 className="pl-8 pr-4 w-full"
               />
               <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />

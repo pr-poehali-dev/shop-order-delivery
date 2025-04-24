@@ -10,19 +10,19 @@ import { Clock, Truck, BadgePercent } from "lucide-react";
 const Index = () => {
   const { toast } = useToast();
   
-  // Примеры данных для продуктового магазина
+  // Примеры данных для гастронома
   const featuredProducts: Product[] = [
-    { id: 1, name: "Яблоки Голден", price: 159, image: "/placeholder.svg", category: "fruits", unit: "кг", weight: "Россия" },
-    { id: 2, name: "Молоко Домик в деревне 3.2%", price: 109, image: "/placeholder.svg", category: "dairy", unit: "л", weight: "1 л", discount: 15 },
-    { id: 3, name: "Хлеб Бородинский", price: 59, image: "/placeholder.svg", category: "bakery", unit: "шт", weight: "300 г" },
-    { id: 4, name: "Куриное филе охлажденное", price: 329, image: "/placeholder.svg", category: "meat", unit: "кг", weight: "Фермерское" },
+    { id: 1, name: "Чайный набор 'Прованс'", price: 1590, image: "/placeholder.svg", category: "tableware", unit: "шт", weight: "3 предмета" },
+    { id: 2, name: "Сок свежевыжатый апельсиновый", price: 290, image: "/placeholder.svg", category: "drinks", unit: "л", weight: "1 л", discount: 15 },
+    { id: 3, name: "Пельмени домашние 'Бабушкины'", price: 450, image: "/placeholder.svg", category: "food", unit: "кг", weight: "500 г" },
+    { id: 4, name: "Кастрюля 'Шеф' с антипригарным покрытием", price: 2950, image: "/placeholder.svg", category: "home", unit: "шт", weight: "2,5 л" },
   ];
   
   const categories = [
-    { id: 1, name: "Фрукты и овощи", image: "/placeholder.svg", slug: "fruits" },
-    { id: 2, name: "Молочные продукты", image: "/placeholder.svg", slug: "dairy" },
-    { id: 3, name: "Мясо и птица", image: "/placeholder.svg", slug: "meat" },
-    { id: 4, name: "Хлеб и выпечка", image: "/placeholder.svg", slug: "bakery" },
+    { id: 1, name: "Еда и продукты", image: "/placeholder.svg", slug: "food" },
+    { id: 2, name: "Напитки и соки", image: "/placeholder.svg", slug: "drinks" },
+    { id: 3, name: "Посуда и кухня", image: "/placeholder.svg", slug: "tableware" },
+    { id: 4, name: "Товары для дома", image: "/placeholder.svg", slug: "home" },
   ];
 
   const handleAddToCart = (product: Product) => {
@@ -33,10 +33,10 @@ const Index = () => {
   };
 
   const discountedProducts: Product[] = [
-    { id: 5, name: "Бананы", price: 119, image: "/placeholder.svg", category: "fruits", unit: "кг", weight: "Эквадор", discount: 20 },
-    { id: 6, name: "Сыр Российский", price: 599, image: "/placeholder.svg", category: "dairy", unit: "кг", weight: "300 г", discount: 15 },
-    { id: 7, name: "Макароны Barilla", price: 159, image: "/placeholder.svg", category: "grocery", unit: "шт", weight: "450 г", discount: 25 },
-    { id: 8, name: "Шоколад Алёнка", price: 99, image: "/placeholder.svg", category: "sweets", unit: "шт", weight: "90 г", discount: 10 },
+    { id: 5, name: "Набор бокалов 'Кристалл'", price: 1490, image: "/placeholder.svg", category: "tableware", unit: "шт", weight: "6 шт", discount: 20 },
+    { id: 6, name: "Кофе зерновой 'Эфиопия'", price: 890, image: "/placeholder.svg", category: "drinks", unit: "шт", weight: "250 г", discount: 15 },
+    { id: 7, name: "Сковорода чугунная классическая", price: 2590, image: "/placeholder.svg", category: "home", unit: "шт", weight: "24 см", discount: 25 },
+    { id: 8, name: "Шоколад горький 'Бельгийский'", price: 390, image: "/placeholder.svg", category: "food", unit: "шт", weight: "100 г", discount: 10 },
   ];
 
   return (
@@ -48,15 +48,14 @@ const Index = () => {
         <div className="container px-4 mx-auto">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Свежие продукты с доставкой на дом
+              Ваш любимый гастроном с доставкой
             </h1>
             <p className="text-lg text-white/90 mb-8">
-              Экономьте время на походах в магазин — выбирайте качественные продукты 
-              с быстрой доставкой в день заказа.
+              Продукты, напитки, посуда и товары для дома — всё необходимое для комфортной жизни с доставкой в день заказа.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                Каталог продуктов
+                Каталог товаров
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
                 Акции недели
@@ -73,22 +72,22 @@ const Index = () => {
             <div className="flex items-center">
               <Clock className="h-8 w-8 text-primary mr-3" />
               <div>
-                <p className="font-medium">Доставка за 60 минут</p>
-                <p className="text-sm text-gray-600">Или ближайшее время</p>
+                <p className="font-medium">Доставка за 90 минут</p>
+                <p className="text-sm text-gray-600">Или в удобное время</p>
               </div>
             </div>
             <div className="flex items-center">
               <Truck className="h-8 w-8 text-primary mr-3" />
               <div>
                 <p className="font-medium">Бесплатная доставка</p>
-                <p className="text-sm text-gray-600">При заказе от 1500 ₽</p>
+                <p className="text-sm text-gray-600">При заказе от 2000 ₽</p>
               </div>
             </div>
             <div className="flex items-center">
               <BadgePercent className="h-8 w-8 text-primary mr-3" />
               <div>
-                <p className="font-medium">Скидки постоянным клиентам</p>
-                <p className="text-sm text-gray-600">До 10% на все товары</p>
+                <p className="font-medium">Программа лояльности</p>
+                <p className="text-sm text-gray-600">Скидки до 15% постоянным клиентам</p>
               </div>
             </div>
           </div>
@@ -97,7 +96,7 @@ const Index = () => {
       
       {/* Categories Section */}
       <CategorySection 
-        title="Категории продуктов"
+        title="Категории товаров"
         categories={categories}
       />
       
@@ -127,8 +126,8 @@ const Index = () => {
       <section className="py-10 bg-secondary">
         <div className="container px-4 mx-auto">
           <div className="text-center text-white">
-            <h2 className="text-3xl font-bold mb-3">Скидка 10% на первый заказ</h2>
-            <p className="mb-6 text-white/90">Используйте промокод ПЕРВЫЙЗАКАЗ при оформлении</p>
+            <h2 className="text-3xl font-bold mb-3">Скидка 15% на первый заказ</h2>
+            <p className="mb-6 text-white/90">Используйте промокод ГАСТРОНОМ при оформлении</p>
             <Button size="lg" className="bg-white text-secondary hover:bg-white/90">Сделать заказ</Button>
           </div>
         </div>
@@ -164,11 +163,11 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-white rounded-lg shadow-sm">
               <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                <span className="text-2xl">🥦</span>
+                <span className="text-2xl">🛒</span>
               </div>
-              <h3 className="text-lg font-medium mb-2">Свежие продукты</h3>
+              <h3 className="text-lg font-medium mb-2">Широкий ассортимент</h3>
               <p className="text-gray-600">
-                Ежедневные поставки от фермеров и проверенных поставщиков
+                Более 5000 товаров для дома, кухни и повседневной жизни
               </p>
             </div>
             
@@ -178,7 +177,7 @@ const Index = () => {
               </div>
               <h3 className="text-lg font-medium mb-2">Быстрая доставка</h3>
               <p className="text-gray-600">
-                Доставляем в день заказа в удобное для вас время
+                Доставляем в день заказа или в удобное для вас время
               </p>
             </div>
             
@@ -200,9 +199,9 @@ const Index = () => {
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">ПродуктыДома</h3>
+              <h3 className="text-xl font-bold mb-4">Гастроном</h3>
               <p className="text-gray-400">
-                Доставка свежих продуктов на дом в вашем городе. Экономьте время на покупках!
+                Всё необходимое для кухни, стола и дома с доставкой в вашем городе.
               </p>
             </div>
             
@@ -211,7 +210,7 @@ const Index = () => {
               <address className="not-italic text-gray-400">
                 <p>г. Москва, ул. Примерная, 123</p>
                 <p className="mt-2">Тел: +7 (495) 123-45-67</p>
-                <p className="mt-2">Email: zakaz@produktydoma.ru</p>
+                <p className="mt-2">Email: zakaz@gastronom.ru</p>
               </address>
             </div>
             
@@ -227,7 +226,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-            <p>© 2023 ПродуктыДома. Все права защищены.</p>
+            <p>© 2023 Гастроном. Все права защищены.</p>
           </div>
         </div>
       </footer>
